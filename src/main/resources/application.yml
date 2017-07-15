@@ -30,3 +30,11 @@ spring:
 # 服务器配置
 server:
   port: 8888
+
+logging:
+  level:
+    com.aaron.hyper: DEBUG
+
+# mybatis配置
+mybatis:
+  config-location: classpath:mybatis-config.xml
