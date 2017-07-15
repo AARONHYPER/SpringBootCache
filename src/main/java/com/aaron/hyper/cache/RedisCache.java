@@ -1,4 +1,4 @@
-package com.aaron.hyper;
+package com.aaron.hyper.cache;
 
 import com.aaron.hyper.utils.ApplicationContextHolder;
 import org.apache.ibatis.cache.Cache;

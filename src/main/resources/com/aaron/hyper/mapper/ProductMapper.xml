@@ -5,14 +5,14 @@
 <mapper namespace="com.aaron.hyper.mapper.ProductMapper">
 
     <!-- 开启基于redis的二级缓存 -->
-    <cache type="com.aaron.hyper.mapper.ProductMapper"/>
+    <cache type="com.aaron.hyper.cache.RedisCache"/>
 
-    <select id="select" resultType="Product">
+    <select id="select" parameterType="Product" resultType="com.aaron.hyper.po.Product">
         SELECT * FROM product WHERE product_id = #{productId} LIMIT 1
     </select>
 
     <update id="update" parameterType="Product" flushCache="true">
-        UPDATE product SET product_name = #{producName}, product_price = #{productPrice} WHERE product_id = #{productId} LIMIT 1
+        UPDATE product SET product_name = #{productName}, price = #{price} WHERE product_id = #{productId} LIMIT 1
     </update>
-    
+
 </mapper>

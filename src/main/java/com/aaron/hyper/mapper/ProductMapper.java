@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface ProductMapper {
 
-    Product select(@Param("id") long productId);
+    Product select(long productId);
 
     int update(Product product);
 }

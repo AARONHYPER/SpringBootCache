@@ -15,7 +15,7 @@ public class Product implements Serializable {
 
     private String productName;
 
-    private BigDecimal productPrice;
+    private BigDecimal price;
 
     public Long getProductId() {
         return productId;
@@ -35,12 +35,12 @@ public class Product implements Serializable {
         return this;
     }
 
-    public BigDecimal getProductPrice() {
-        return productPrice;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public Product setProductPrice(BigDecimal productPrice) {
-        this.productPrice = productPrice;
+    public Product setPrice(BigDecimal price) {
+        this.price = price;
         return this;
     }
 }

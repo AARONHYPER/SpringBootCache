@@ -1,6 +1,8 @@
 package com.aaron.hyper.controller;
 
-import com.aaron.hyper.pmapper.Product;
+import com.aaron.hyper.mapper.ProductMapper;
+import com.aaron.hyper.po.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -10,10 +12,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/product")
 public class ProductController {
 
+    @Autowired
+    private ProductMapper productMapper;
+
     @GetMapping("/{id}")
     public Product getProductInfo(@PathVariable("id") Long productId) {
 
-        return null;
+        return productMapper.select(productId);
     }
 
     @PutMapping("/{id}")
