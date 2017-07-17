@@ -22,3 +22,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+src/main/java/com/aaron/hyper/service/
+src/main/resources/static/
+src/main/resources/templates/
